@@ -1,24 +1,61 @@
-# README
+Запуск Ruby on Rails проекту, клонованого з GitHub
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. **Перевірте наявність необхідних засобів**:
+   Переконайтеся, що на вашому комп'ютері встановлені Ruby, Ruby on Rails та Bundler.
 
-Things you may want to cover:
+   Встановлення Ruby: Інструкція для [Ubuntu](https://www.ruby-lang.org/uk/documentation/installation/#apt), [Windows](https://rubyinstaller.org/), [macOS](https://www.ruby-lang.org/uk/documentation/installation/#homebrew).
 
-* Ruby version
+   Встановлення Ruby on Rails: Відкрийте командний рядок та введіть:
 
-* System dependencies
+   ```
+   gem install rails
+   ```
 
-* Configuration
+   Встановлення Bundler: Після встановлення Ruby on Rails виконайте:
 
-* Database creation
+   ```
+   gem install bundler
+   ```
 
-* Database initialization
+2. **Клонуйте проект з GitHub**:
+   Відкрийте термінал та перейдіть у папку, де ви хочете зберегти проект. Потім введіть команду:
 
-* How to run the test suite
+   ```
+   git clone https://github.com/RuslanCHNU/BlogPlatform.git
+   ```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. **Перейдіть у папку проекту**:
+   Введіть команду для переходу у директорію проекту:
 
-* Deployment instructions
+   ```
+   cd BlogPlatform
+   ```
 
-* ...
+4. **Встановіть залежності**:
+   Запустіть Bundler для встановлення всіх необхідних гемів (бібліотек):
+
+   ```
+   bundle install
+   ```
+
+5. **Налаштуйте базу даних**:
+   Створіть базу даних та запустіть міграції (створення таблиць у базі):
+
+   ```
+   rails db:create
+   rails db:migrate
+   ```
+
+6. **Запустіть сервер**:
+   Запустіть локальний сервер Rails для перевірки проекту у веб-браузері:
+
+   ```
+   rails server
+   ```
+
+7. **Перевірте проект**:
+   Відкрийте веб-браузер і перейдіть за адресою `http://localhost:3000`, щоб побачити ваш проект Ruby on Rails в дії.
+
+Тепер ви готові працювати з клонованим проектом Ruby on Rails на своєму комп'ютері!
+
+Зверніть увагу, що це загальна інструкція, і може бути деякі відмінності залежно від конкретних налаштувань вашої системи.
