@@ -1,0 +1,21 @@
+<div class="new-blog-post">
+  <h1>Створення нового посту</h1>
+
+  <%= form_with(model: @blog_post, local: true) do |form| %>
+    <div class="field">
+      <%= form.label :Заголовок %>
+      <%= form.text_field :title, class: 'fixed-input-title' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :Зміст %>
+      <%= form.text_area :content, class: 'fixed-input' %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Створити пост', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+
+  <%= button_to 'Назад', blog_posts_path, method: :get, class: 'btn btn-secondary' %>
+</div>

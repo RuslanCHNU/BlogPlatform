@@ -1,0 +1,19 @@
+<div class="header-container">
+    <header>
+        <h1>Blog Posts</h1>
+        <% if user_signed_in? %>
+            <div class="header-buttons">
+                <%= button_to 'Створити пост', new_blog_post_path, method: :get, class: 'btn btn-primary new-blog-button' %>
+            </div>
+        <% end %>
+    </header>
+</div>
+
+<div class="blog-posts-grid">
+    <% @blog_posts.each do |blog_post| %>
+        <div class="blog-post" onclick="location.href='<%= blog_post_path(blog_post) %>'" style="cursor: pointer;">
+            <h2 class="hover-underline"><%= blog_post.title %></h2>
+            <p><%= truncate(blog_post.content, length: 200) %></p>
+        </div>
+    <% end %>
+</div>

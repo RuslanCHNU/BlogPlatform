@@ -1,0 +1,16 @@
+<div class="show-page">
+  <h1 class="title"><%= @blog_post.title %></h1>
+  <p class="content"><%= @blog_post.content %></p>
+  <div class="buttons">
+    <% if user_signed_in? && @blog_post.user == current_user %>
+      <%= button_to 'Редагувати', edit_blog_post_path(@blog_post), method: :get, class: 'btn btn-warning' %>
+      <%= form_for(@blog_post, method: :delete, data: { confirm: 'Are you sure?' }) do |f| %>
+        <%= f.submit 'Видалити', class: 'btn btn-danger' %>
+      <% end %>
+    <% end %>
+    <%= button_to 'Назад', blog_posts_path, method: :get, class: 'btn btn-secondary' %>
+    <% if user_signed_in? %>
+      <%= button_to 'Створити пост', new_blog_post_path, method: :get, class: 'btn btn-primary new-blog-button' %>
+    <% end %>
+  </div>
+</div>

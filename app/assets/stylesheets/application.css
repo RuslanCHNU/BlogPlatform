@@ -1,0 +1,298 @@
+/* application.css or application.scss */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Handjet&family=Neonderthaw&display=swap');
+
+/* Center content both horizontally and vertically */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Style for the main container */
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Center the header at the top */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Center the blog post content */
+.blog-post {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style for the back to blog posts button */
+.back-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Center the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for form fields */
+.field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Style for form actions */
+.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Center the flash messages */
+.flash-messages {
+    text-align: center;
+}
+
+/* Style for buttons */
+.btn {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    min-width: 200px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Style for different button colors */
+.btn-primary {
+    background-color: white;
+    border: 2px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: white;
+    border: 2px solid #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+}
+
+.btn-warning {
+    background-color: white;
+    border: 2px solid #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #ffc107;
+}
+
+.btn-danger {
+    background-color: white;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #dc3545;
+    color: black;
+}
+
+/* Create a grid layout with 4 columns */
+.blog-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+/* Create a grid layout with 4 columns */
+.blog-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Style for each blog post */
+.blog-post {
+    border: 2px solid #fff;
+    border-bottom: 2px solid #ccc;
+    /* padding: 20px; */
+    cursor: pointer;
+    padding-top: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: border .3s;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.blog-post h2 {
+    margin: 5px 0 0 0;
+}
+
+.blog-post:hover {
+    border-color: black;
+}
+
+/* Add a class for underlining on hover */
+.hover-underline:hover {
+    text-decoration: underline;
+}
+
+.blog-post p {
+    flex-grow: 1;
+    margin: 10px 0 0 0;
+    text-align: left;
+    text-overflow: hidden;
+}
+
+.header-container {
+    top: 0;
+    display: flex;
+    position: fixed;
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Handjet', cursive; */
+}
+
+.header-container h1 {
+    margin: 5px;
+    text-align: center;
+}
+
+.new-blog-button {
+    position: fixed;
+    top: 10px;
+    right: 100px;
+}
+
+/* .new-blog-button_2 {
+    position: fixed;
+    top: 10px;
+    right: 150px;
+} */
+
+/* ... Your existing styles ... */
+
+/* Style for the show page container */
+.show-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Style for the title */
+.title {
+    margin: 0;
+}
+
+/* Style for the buttons container */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+/* Style for each button */
+.btn {
+    margin-left: 10px;
+}
+
+/* Style for the content */
+.content {
+    max-width: 70%;
+    text-align: justify;
+}
+
+/* ... Your existing styles ... */
+
+/* Style for the fixed buttons */
+.fixed-button {
+    position: fixed;
+    top: 10px;
+    right: 220px;
+}
+
+.fixed-button_2 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.fixed-button_3 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    min-width: 50px;
+}
+
+/* ... Your existing styles ... */
+
+/* Style for the new blog post container */
+.new-blog-post {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.new-blog-post h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Style for fixed input fields */
+.fixed-input {
+    width: 100%;
+    min-width: 300px;
+    min-height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.fixed-input-title {
+    width: 100%;
+    min-width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ... Your existing styles ... */

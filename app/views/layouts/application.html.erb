@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogPlatform</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <% if user_signed_in? && !devise_controller? %>
+      <%= form_tag(destroy_user_session_path, method: :delete) do %>
+        <%= submit_tag 'Вийти', class: 'btn btn-danger fixed-button_3' %>
+      <% end %>
+    <% elsif !devise_controller? %>
+      <%= button_to 'Зареєструватися', new_user_registration_path, method: :get, class: 'btn btn-secondary fixed-button' %>
+      <%= button_to 'Логін', new_user_session_path, method: :get, class: 'btn btn-primary fixed-button_2' %>
+    <% end %>
+  </body>
+</html>
